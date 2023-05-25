@@ -50,7 +50,7 @@ public class Interective : MonoBehaviour
             Debug.DrawRay(_ray.origin, _ray.direction * _maxDistanceRay, Color.green);
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                _hit.transform.GetComponent<Door>().Open();
+                _hit.transform.GetComponent<Door>().MoveDoor();
             }
         }
 
