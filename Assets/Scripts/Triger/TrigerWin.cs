@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Triger : MonoBehaviour
+public class TrigerWin : MonoBehaviour
 {
     [SerializeField]
-    Door _door;
+    UI_Manager manager;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Interective>())
+        if (other.GetComponent<Interective>())
         {
-            _door.AnimDoor();
-            gameObject.SetActive(false);
+            manager.PanelActiveTrue(1);
         }
     }
 }

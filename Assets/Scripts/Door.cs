@@ -8,13 +8,13 @@ public class Door : MonoBehaviour
 {
     [SerializeField]
     GameObject go;
-    public void AnimDoor()
+    public void AnimDoor(float anim)
     {
-        go.transform.DORotate(new Vector3(90f, 0f, 0f), 2.5f);
+        go.transform.DOLocalRotate(new Vector3(0f, 0f, anim), 2.5f);
     }
     public void Open()
     {
-        go.transform.DORotate(new Vector3(0f, -90f, 0f), 2.5f);
+        go.transform.DORotate(new Vector3(0f, 0f, -90f), 2.5f);
     }
     public void Close()
     {
