@@ -31,7 +31,7 @@ public class CharacterMouseMove : MonoBehaviour
     {
         x_Rot += Input.GetAxis("Mouse X") * sensivity;
         y_Rot += Input.GetAxis("Mouse Y") * sensivity;
-        y_Rot = Mathf.Clamp(y_Rot, -55f, 55f);
+        y_Rot = Mathf.Clamp(y_Rot, -70f, 70f);
 
         x_RotCurrent = Mathf.SmoothDamp(x_RotCurrent, x_Rot, ref x_currentVelosity, _smoothTime);
         y_RotCurrent = Mathf.SmoothDamp(y_RotCurrent, y_Rot, ref y_currentVelosity, _smoothTime);
